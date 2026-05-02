@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific Visualization &amp; ParaView Work Samples</title>
+  <desc id="desc">A stylized banner showing scalar contours, vector glyphs, and a review checklist.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08121f"/>
+      <stop offset="45%" stop-color="#0f2740"/>
+      <stop offset="100%" stop-color="#05080f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#59c3c3"/>
+      <stop offset="50%" stop-color="#7f8cff"/>
+      <stop offset="100%" stop-color="#f6b26b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#102238" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#0b1422" stop-opacity="0.84"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#7f8cff" stop-opacity="0.20"/>
+      <stop offset="55%" stop-color="#59c3c3" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#59c3c3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#9eb6d4" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#d7ecff"/>
+    </marker>
+    <style>
+      .title { font: 700 62px/1.05 "Segoe UI", "Inter", Arial, sans-serif; fill: #f4f8ff; letter-spacing: 0.2px; }
+      .subtitle { font: 400 24px/1.4 "Segoe UI", "Inter", Arial, sans-serif; fill: #d1def0; }
+      .small { font: 600 18px/1.3 "Segoe UI", "Inter", Arial, sans-serif; fill: #d7ecff; letter-spacing: 1.2px; text-transform: uppercase; }
+      .panel-title { font: 700 24px/1.2 "Segoe UI", "Inter", Arial, sans-serif; fill: #f6fbff; }
+      .panel-copy { font: 400 18px/1.45 "Segoe UI", "Inter", Arial, sans-serif; fill: #c9d8ea; }
+      .chip { font: 700 15px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #04101d; }
+      .label { font: 600 16px/1.2 "Segoe UI", "Inter", Arial, sans-serif; fill: #bfd0e4; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="640" fill="url(#bg)"/>
+  <rect width="1600" height="640" fill="url(#grid)"/>
+  <circle cx="1240" cy="128" r="260" fill="url(#glow)" filter="url(#blur)"/>
+  <circle cx="270" cy="520" r="220" fill="#59c3c3" opacity="0.07" filter="url(#blur)"/>
+  <circle cx="1480" cy="500" r="180" fill="#f6b26b" opacity="0.05" filter="url(#blur)"/>
+
+  <text x="86" y="104" class="small">Scientific Visualization Portfolio</text>
+  <text x="86" y="190" class="title">ParaView Work Samples</text>
+  <text x="86" y="236" class="subtitle">Self-directed documentation for scalar fields, vector fields, and AI-output quality review.</text>
+
+  <g transform="translate(86 290)">
+    <rect width="220" height="42" rx="21" fill="url(#accent)" opacity="0.95"/>
+    <text x="110" y="27" text-anchor="middle" class="chip">WORKFLOW / REVIEW / REPRODUCIBILITY</text>
+  </g>
+
+  <g transform="translate(86 366)">
+    <text class="label" x="0" y="0">ParaView</text>
+    <text class="label" x="0" y="32">VTK-style datasets</text>
+    <text class="label" x="0" y="64">Contour, Slice, Glyph, Stream Tracer</text>
+    <text class="label" x="0" y="96">Color maps and export discipline</text>
+  </g>
+
+  <!-- Scalar panel -->
+  <g transform="translate(580 120)">
+    <rect width="300" height="340" rx="28" fill="url(#panel)" stroke="#8fb8e8" stroke-opacity="0.28"/>
+    <text x="28" y="46" class="panel-title">Scalar field</text>
+    <text x="28" y="76" class="panel-copy">Contours on a synthetic temperature surface</text>
+    <g transform="translate(36 98)">
+      <rect width="228" height="200" rx="18" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.12"/>
+      <path d="M24 162 C58 126, 78 110, 114 104 C148 99, 186 108, 204 78" fill="none" stroke="#59c3c3" stroke-width="2.2" opacity="0.95"/>
+      <path d="M14 146 C50 110, 90 98, 126 92 C160 86, 186 78, 214 44" fill="none" stroke="#86d9ff" stroke-width="2.2" opacity="0.9"/>
+      <path d="M18 122 C52 94, 88 82, 122 78 C166 73, 186 60, 214 30" fill="none" stroke="#f6b26b" stroke-width="2.2" opacity="0.9"/>
+      <path d="M18 178 C58 150, 94 144, 136 134 C174 125, 194 110, 214 84" fill="none" stroke="#7f8cff" stroke-width="2.2" opacity="0.9"/>
+      <circle cx="176" cy="54" r="22" fill="#59c3c3" opacity="0.22"/>
+      <circle cx="120" cy="110" r="28" fill="#7f8cff" opacity="0.20"/>
+      <circle cx="76" cy="150" r="20" fill="#f6b26b" opacity="0.22"/>
+      <rect x="14" y="20" width="66" height="20" rx="10" fill="#59c3c3" opacity="0.9"/>
+      <text x="47" y="35" text-anchor="middle" class="chip">SCALAR</text>
+    </g>
+  </g>
+
+  <!-- Vector panel -->
+  <g transform="translate(920 120)">
+    <rect width="300" height="340" rx="28" fill="url(#panel)" stroke="#8fb8e8" stroke-opacity="0.28"/>
+    <text x="28" y="46" class="panel-title">Vector field</text>
+    <text x="28" y="76" class="panel-copy">Glyphs and streamlines around a rotating flow</text>
+    <g transform="translate(36 98)">
+      <rect width="228" height="200" rx="18" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.12"/>
+      <g stroke="#d7ecff" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.92">
+        <line x1="38" y1="156" x2="66" y2="128"/>
+        <line x1="70" y1="132" x2="96" y2="104"/>
+        <line x1="102" y1="102" x2="128" y2="74"/>
+        <line x1="134" y1="74" x2="160" y2="46"/>
+        <line x1="166" y1="48" x2="190" y2="24"/>
+        <line x1="62" y1="170" x2="88" y2="144"/>
+        <line x1="96" y1="146" x2="120" y2="120"/>
+        <line x1="128" y1="120" x2="154" y2="94"/>
+        <line x1="158" y1="92" x2="184" y2="66"/>
+      </g>
+      <circle cx="118" cy="106" r="60" fill="none" stroke="#59c3c3" stroke-width="2" stroke-dasharray="8 10" opacity="0.75"/>
+      <circle cx="118" cy="106" r="32" fill="none" stroke="#f6b26b" stroke-width="2" stroke-dasharray="4 8" opacity="0.55"/>
+      <rect x="14" y="20" width="68" height="20" rx="10" fill="#7f8cff" opacity="0.9"/>
+      <text x="48" y="35" text-anchor="middle" class="chip">VECTOR</text>
+    </g>
+  </g>
+
+  <!-- Review panel -->
+  <g transform="translate(1260 120)">
+    <rect width="250" height="340" rx="28" fill="url(#panel)" stroke="#8fb8e8" stroke-opacity="0.28"/>
+    <text x="26" y="46" class="panel-title">Review</text>
+    <text x="26" y="76" class="panel-copy">AI-output quality and workflow checks</text>
+    <g transform="translate(28 108)">
+      <rect width="194" height="196" rx="18" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.12"/>
+      <g fill="none" stroke="#59c3c3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 60 l12 12 22 -24"/>
+        <path d="M32 110 l12 12 22 -24"/>
+        <path d="M32 160 l12 12 22 -24"/>
+      </g>
+      <g class="panel-copy" fill="#d1def0">
+        <text x="78" y="66">Dataset format</text>
+        <text x="78" y="116">Array selection</text>
+        <text x="78" y="166">Limitations</text>
+      </g>
+      <rect x="16" y="18" width="76" height="20" rx="10" fill="#f6b26b" opacity="0.9"/>
+      <text x="54" y="33" text-anchor="middle" class="chip">CHECK</text>
+    </g>
+  </g>
+
+  <path d="M 580 490 C 790 534, 972 532, 1190 490" fill="none" stroke="url(#accent)" stroke-width="3.5" opacity="0.9"/>
+  <path d="M 106 568 C 356 520, 586 530, 770 576" fill="none" stroke="#59c3c3" stroke-width="3" opacity="0.12"/>
+  <path d="M 104 590 C 360 552, 588 556, 786 606" fill="none" stroke="#7f8cff" stroke-width="2.8" opacity="0.10"/>
+</svg>
