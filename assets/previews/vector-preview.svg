@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Vector Field Preview</title>
+  <desc id="desc">A polished synthetic vector-field preview with glyph arrows, streamlines, and workflow notes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050b14"/>
+      <stop offset="100%" stop-color="#0c2034"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12263d"/>
+      <stop offset="100%" stop-color="#08111b"/>
+    </linearGradient>
+    <linearGradient id="legend" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#59c3c3"/>
+      <stop offset="50%" stop-color="#7f8cff"/>
+      <stop offset="100%" stop-color="#f6b26b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="55%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#59c3c3" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#59c3c3" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b6c9e2" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 z" fill="#dbe8f6"/>
+    </marker>
+    <style>
+      .eyebrow { font: 700 15px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #dbe8f6; letter-spacing: 1.8px; text-transform: uppercase; }
+      .title { font: 800 56px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f7fbff; letter-spacing: -0.6px; }
+      .subtitle { font: 400 20px/1.45 "Segoe UI", "Inter", Arial, sans-serif; fill: #c5d5e7; }
+      .chip { font: 700 13px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #08111c; letter-spacing: 1px; }
+      .panelTitle { font: 700 20px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f7fbff; }
+      .panelCopy { font: 600 15px/1.35 "Segoe UI", "Inter", Arial, sans-serif; fill: #d5e4f2; }
+      .ui { font: 600 14px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #dbe8f6; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <circle cx="910" cy="110" r="220" fill="url(#glow)"/>
+
+  <text x="70" y="72" class="eyebrow">Feature Preview</text>
+  <text x="70" y="138" class="title">Vector Field</text>
+  <text x="70" y="174" class="subtitle">Glyphs, streamlines, and magnitude-aware color mapping.</text>
+
+  <g transform="translate(70 220)">
+    <rect width="250" height="42" rx="21" fill="url(#legend)" opacity="0.95"/>
+    <text x="125" y="27" text-anchor="middle" class="chip">GLYPH  /  MAGNITUDE  /  STREAMLINE</text>
+  </g>
+
+  <g transform="translate(70 294)">
+    <rect width="780" height="340" rx="30" fill="url(#card)" stroke="#8fb8e8" stroke-opacity="0.20"/>
+    <text x="26" y="40" class="panelTitle">Vector render</text>
+    <g transform="translate(26 62)">
+      <rect width="500" height="250" rx="24" fill="#07111a" stroke="#9cc8ff" stroke-opacity="0.08"/>
+      <circle cx="250" cy="126" r="70" fill="none" stroke="#59c3c3" stroke-width="2.6" stroke-dasharray="8 10" opacity="0.8"/>
+      <circle cx="250" cy="126" r="42" fill="none" stroke="#f6b26b" stroke-width="2.4" stroke-dasharray="4 8" opacity="0.65"/>
+      <g stroke="#dfeaf7" stroke-width="2.6" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.95">
+        <line x1="74" y1="198" x2="108" y2="164"/>
+        <line x1="108" y1="164" x2="142" y2="130"/>
+        <line x1="142" y1="130" x2="176" y2="96"/>
+        <line x1="176" y1="96" x2="210" y2="62"/>
+        <line x1="210" y1="62" x2="244" y2="28"/>
+        <line x1="136" y1="216" x2="170" y2="182"/>
+        <line x1="170" y1="182" x2="204" y2="148"/>
+        <line x1="204" y1="148" x2="238" y2="114"/>
+        <line x1="238" y1="114" x2="272" y2="80"/>
+        <line x1="272" y1="80" x2="306" y2="46"/>
+        <line x1="306" y1="46" x2="340" y2="12"/>
+      </g>
+      <path d="M56 88 C 128 58, 180 52, 244 64 C 298 74, 356 64, 442 24" fill="none" stroke="#59c3c3" stroke-width="2.5" opacity="0.95"/>
+      <path d="M54 112 C 126 84, 182 80, 244 90 C 300 100, 358 92, 442 52" fill="none" stroke="#86d9ff" stroke-width="2.5" opacity="0.95"/>
+      <path d="M54 136 C 124 110, 184 108, 244 118 C 302 128, 360 120, 442 84" fill="none" stroke="#f6b26b" stroke-width="2.5" opacity="0.92"/>
+      <rect x="18" y="18" width="70" height="18" rx="9" fill="#7f8cff"/>
+      <text x="53" y="31" text-anchor="middle" class="chip">VECTOR</text>
+    </g>
+    <g transform="translate(560 68)">
+      <rect width="192" height="250" rx="24" fill="#0b1726" stroke="#9cc8ff" stroke-opacity="0.12"/>
+      <text x="22" y="38" class="panelTitle">Workflow</text>
+      <g class="panelCopy">
+        <text x="22" y="82">1. Load vector data</text>
+        <text x="22" y="118">2. Inspect array</text>
+        <text x="22" y="154">3. Add glyphs</text>
+        <text x="22" y="190">4. Scale by magnitude</text>
+        <text x="22" y="226">5. Export screenshot</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="70" y="674" class="panelCopy">The field is synthetic, so the emphasis stays on readable direction and documented scale.</text>
+</svg>

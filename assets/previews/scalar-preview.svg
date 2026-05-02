@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Scalar Field Preview</title>
+  <desc id="desc">A polished synthetic scalar-field preview with contour lines, a color bar, and workflow notes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050b14"/>
+      <stop offset="100%" stop-color="#0c2034"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12263d"/>
+      <stop offset="100%" stop-color="#08111b"/>
+    </linearGradient>
+    <linearGradient id="legend" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#59c3c3"/>
+      <stop offset="50%" stop-color="#7f8cff"/>
+      <stop offset="100%" stop-color="#f6b26b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="55%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#7f8cff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7f8cff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b6c9e2" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <style>
+      .eyebrow { font: 700 15px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #dbe8f6; letter-spacing: 1.8px; text-transform: uppercase; }
+      .title { font: 800 56px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f7fbff; letter-spacing: -0.6px; }
+      .subtitle { font: 400 20px/1.45 "Segoe UI", "Inter", Arial, sans-serif; fill: #c5d5e7; }
+      .chip { font: 700 13px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #08111c; letter-spacing: 1px; }
+      .panelTitle { font: 700 20px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f7fbff; }
+      .panelCopy { font: 600 15px/1.35 "Segoe UI", "Inter", Arial, sans-serif; fill: #d5e4f2; }
+      .ui { font: 600 14px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #dbe8f6; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <circle cx="960" cy="110" r="220" fill="url(#glow)"/>
+
+  <text x="70" y="72" class="eyebrow">Feature Preview</text>
+  <text x="70" y="138" class="title">Volume &amp; Contour</text>
+  <text x="70" y="174" class="subtitle">Synthetic scalar field with slice, contour, and color mapping.</text>
+
+  <g transform="translate(70 220)">
+    <rect width="250" height="42" rx="21" fill="url(#legend)" opacity="0.95"/>
+    <text x="125" y="27" text-anchor="middle" class="chip">SLICE  /  CONTOUR  /  EXPORT</text>
+  </g>
+
+  <g transform="translate(70 294)">
+    <rect width="780" height="340" rx="30" fill="url(#card)" stroke="#8fb8e8" stroke-opacity="0.20"/>
+    <text x="26" y="40" class="panelTitle">Scalar render</text>
+    <g transform="translate(26 62)">
+      <rect width="500" height="250" rx="24" fill="#07111a" stroke="#9cc8ff" stroke-opacity="0.08"/>
+      <circle cx="360" cy="68" r="44" fill="#59c3c3" opacity="0.12"/>
+      <circle cx="228" cy="130" r="70" fill="#7f8cff" opacity="0.14"/>
+      <circle cx="110" cy="186" r="40" fill="#f6b26b" opacity="0.12"/>
+      <path d="M20 214 C 82 176, 130 170, 182 176 C 238 182, 286 166, 324 136 C 360 108, 402 88, 482 76" fill="none" stroke="#59c3c3" stroke-width="2.5"/>
+      <path d="M20 192 C 82 156, 130 150, 182 156 C 236 162, 284 146, 322 118 C 360 92, 402 74, 482 58" fill="none" stroke="#86d9ff" stroke-width="2.5"/>
+      <path d="M20 170 C 82 134, 132 128, 184 134 C 238 140, 286 122, 324 94 C 360 70, 402 54, 482 40" fill="none" stroke="#f6b26b" stroke-width="2.5"/>
+      <path d="M20 236 C 82 200, 134 196, 188 202 C 242 208, 292 194, 330 170 C 368 146, 404 132, 482 112" fill="none" stroke="#7f8cff" stroke-width="2.5"/>
+      <rect x="18" y="18" width="68" height="18" rx="9" fill="#59c3c3"/>
+      <text x="52" y="31" text-anchor="middle" class="chip">SCALAR</text>
+      <rect x="438" y="18" width="44" height="214" rx="10" fill="#0d1624" stroke="#dbe8f6" stroke-opacity="0.12"/>
+      <rect x="446" y="26" width="28" height="26" rx="4" fill="#59c3c3"/>
+      <rect x="446" y="54" width="28" height="26" rx="4" fill="#86d9ff"/>
+      <rect x="446" y="82" width="28" height="26" rx="4" fill="#7f8cff"/>
+      <rect x="446" y="110" width="28" height="26" rx="4" fill="#b0a3ff"/>
+      <rect x="446" y="138" width="28" height="26" rx="4" fill="#f6b26b"/>
+      <rect x="446" y="166" width="28" height="26" rx="4" fill="#f2c17a"/>
+    </g>
+    <g transform="translate(560 68)">
+      <rect width="192" height="250" rx="24" fill="#0b1726" stroke="#9cc8ff" stroke-opacity="0.12"/>
+      <text x="22" y="38" class="panelTitle">Workflow</text>
+      <g class="panelCopy">
+        <text x="22" y="82">1. Load data</text>
+        <text x="22" y="118">2. Slice the volume</text>
+        <text x="22" y="154">3. Contour the slice</text>
+        <text x="22" y="190">4. Color by scalar</text>
+        <text x="22" y="226">5. Export screenshot</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="70" y="674" class="panelCopy">A synthetic scalar field lets the workflow stay clear, honest, and reproducible.</text>
+</svg>
