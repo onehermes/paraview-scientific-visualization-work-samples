@@ -1,135 +1,157 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
   <title id="title">Scientific Visualization &amp; ParaView Work Samples</title>
-  <desc id="desc">A stylized banner showing scalar contours, vector glyphs, and a review checklist.</desc>
+  <desc id="desc">A polished banner with a title, scalar field card, vector field card, and review checklist card.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#08121f"/>
-      <stop offset="45%" stop-color="#0f2740"/>
-      <stop offset="100%" stop-color="#05080f"/>
+      <stop offset="0%" stop-color="#050c17"/>
+      <stop offset="48%" stop-color="#0b2035"/>
+      <stop offset="100%" stop-color="#03060c"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#59c3c3"/>
       <stop offset="50%" stop-color="#7f8cff"/>
       <stop offset="100%" stop-color="#f6b26b"/>
     </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#102238" stop-opacity="0.92"/>
-      <stop offset="100%" stop-color="#0b1422" stop-opacity="0.84"/>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#102339" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#09111c" stop-opacity="0.95"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="70%">
-      <stop offset="0%" stop-color="#7f8cff" stop-opacity="0.20"/>
-      <stop offset="55%" stop-color="#59c3c3" stop-opacity="0.08"/>
+    <linearGradient id="softLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#59c3c3" stop-opacity="0.0"/>
+      <stop offset="35%" stop-color="#59c3c3" stop-opacity="0.8"/>
+      <stop offset="65%" stop-color="#7f8cff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f6b26b" stop-opacity="0.0"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#7f8cff" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#59c3c3" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#59c3c3" stop-opacity="0"/>
     </radialGradient>
-    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="14"/>
-    </filter>
+    <radialGradient id="glowB" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#f6b26b" stop-opacity="0.20"/>
+      <stop offset="65%" stop-color="#f6b26b" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#f6b26b" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#9eb6d4" stroke-opacity="0.08" stroke-width="1"/>
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#a9c3df" stroke-opacity="0.07" stroke-width="1"/>
     </pattern>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
       <path d="M0,0 L12,6 L0,12 z" fill="#d7ecff"/>
     </marker>
     <style>
-      .title { font: 700 62px/1.05 "Segoe UI", "Inter", Arial, sans-serif; fill: #f4f8ff; letter-spacing: 0.2px; }
-      .subtitle { font: 400 24px/1.4 "Segoe UI", "Inter", Arial, sans-serif; fill: #d1def0; }
-      .small { font: 600 18px/1.3 "Segoe UI", "Inter", Arial, sans-serif; fill: #d7ecff; letter-spacing: 1.2px; text-transform: uppercase; }
-      .panel-title { font: 700 24px/1.2 "Segoe UI", "Inter", Arial, sans-serif; fill: #f6fbff; }
-      .panel-copy { font: 400 18px/1.45 "Segoe UI", "Inter", Arial, sans-serif; fill: #c9d8ea; }
-      .chip { font: 700 15px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #04101d; }
-      .label { font: 600 16px/1.2 "Segoe UI", "Inter", Arial, sans-serif; fill: #bfd0e4; }
+      .eyebrow { font: 700 18px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #d9e8f8; letter-spacing: 2px; text-transform: uppercase; }
+      .titleMain { font: 800 76px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f6fbff; letter-spacing: -0.4px; }
+      .titleSub { font: 700 58px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f6fbff; letter-spacing: -0.3px; }
+      .subtitle { font: 400 24px/1.45 "Segoe UI", "Inter", Arial, sans-serif; fill: #cad9ea; }
+      .chip { font: 700 14px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #08111c; letter-spacing: 1px; }
+      .cardTitle { font: 700 24px/1.1 "Segoe UI", "Inter", Arial, sans-serif; fill: #f6fbff; }
+      .cardCopy { font: 400 17px/1.4 "Segoe UI", "Inter", Arial, sans-serif; fill: #c7d7e9; }
+      .miniLabel { font: 700 15px/1 "Segoe UI", "Inter", Arial, sans-serif; fill: #dce9f7; letter-spacing: 0.8px; }
+      .checkText { font: 600 16px/1.2 "Segoe UI", "Inter", Arial, sans-serif; fill: #dbe8f6; }
     </style>
   </defs>
 
-  <rect width="1600" height="640" fill="url(#bg)"/>
-  <rect width="1600" height="640" fill="url(#grid)"/>
-  <circle cx="1240" cy="128" r="260" fill="url(#glow)" filter="url(#blur)"/>
-  <circle cx="270" cy="520" r="220" fill="#59c3c3" opacity="0.07" filter="url(#blur)"/>
-  <circle cx="1480" cy="500" r="180" fill="#f6b26b" opacity="0.05" filter="url(#blur)"/>
+  <rect width="1600" height="760" fill="url(#bg)"/>
+  <rect width="1600" height="760" fill="url(#grid)"/>
+  <circle cx="1290" cy="118" r="290" fill="url(#glowA)" filter="url(#blur)"/>
+  <circle cx="180" cy="622" r="250" fill="url(#glowB)" filter="url(#blur)"/>
+  <circle cx="1490" cy="620" r="170" fill="#59c3c3" opacity="0.06" filter="url(#blur)"/>
 
-  <text x="86" y="104" class="small">Scientific Visualization Portfolio</text>
-  <text x="86" y="190" class="title">ParaView Work Samples</text>
-  <text x="86" y="236" class="subtitle">Self-directed documentation for scalar fields, vector fields, and AI-output quality review.</text>
+  <path d="M110 152 C 300 110, 500 110, 690 152" fill="none" stroke="#9cc8ff" stroke-opacity="0.14" stroke-width="3"/>
+  <path d="M110 170 C 310 126, 500 126, 690 170" fill="none" stroke="#59c3c3" stroke-opacity="0.13" stroke-width="2.4"/>
+  <path d="M910 154 C 1090 112, 1290 110, 1490 154" fill="none" stroke="#f6b26b" stroke-opacity="0.12" stroke-width="3"/>
 
-  <g transform="translate(86 290)">
-    <rect width="220" height="42" rx="21" fill="url(#accent)" opacity="0.95"/>
-    <text x="110" y="27" text-anchor="middle" class="chip">WORKFLOW / REVIEW / REPRODUCIBILITY</text>
+  <text x="800" y="88" text-anchor="middle" class="eyebrow">Scientific Visualization Portfolio</text>
+  <text x="800" y="182" text-anchor="middle" class="titleMain">ParaView</text>
+  <text x="800" y="254" text-anchor="middle" class="titleSub">Work Samples</text>
+  <text x="800" y="302" text-anchor="middle" class="subtitle">
+    <tspan x="800" dy="0">Self-directed documentation for scalar fields, vector fields, and AI-output quality review.</tspan>
+  </text>
+
+  <g transform="translate(540 340)">
+    <rect width="520" height="42" rx="21" fill="url(#accent)" opacity="0.95"/>
+    <text x="260" y="27" text-anchor="middle" class="chip">WORKFLOW  /  REVIEW  /  REPRODUCIBILITY</text>
   </g>
 
-  <g transform="translate(86 366)">
-    <text class="label" x="0" y="0">ParaView</text>
-    <text class="label" x="0" y="32">VTK-style datasets</text>
-    <text class="label" x="0" y="64">Contour, Slice, Glyph, Stream Tracer</text>
-    <text class="label" x="0" y="96">Color maps and export discipline</text>
-  </g>
-
-  <!-- Scalar panel -->
-  <g transform="translate(580 120)">
-    <rect width="300" height="340" rx="28" fill="url(#panel)" stroke="#8fb8e8" stroke-opacity="0.28"/>
-    <text x="28" y="46" class="panel-title">Scalar field</text>
-    <text x="28" y="76" class="panel-copy">Contours on a synthetic temperature surface</text>
-    <g transform="translate(36 98)">
-      <rect width="228" height="200" rx="18" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.12"/>
-      <path d="M24 162 C58 126, 78 110, 114 104 C148 99, 186 108, 204 78" fill="none" stroke="#59c3c3" stroke-width="2.2" opacity="0.95"/>
-      <path d="M14 146 C50 110, 90 98, 126 92 C160 86, 186 78, 214 44" fill="none" stroke="#86d9ff" stroke-width="2.2" opacity="0.9"/>
-      <path d="M18 122 C52 94, 88 82, 122 78 C166 73, 186 60, 214 30" fill="none" stroke="#f6b26b" stroke-width="2.2" opacity="0.9"/>
-      <path d="M18 178 C58 150, 94 144, 136 134 C174 125, 194 110, 214 84" fill="none" stroke="#7f8cff" stroke-width="2.2" opacity="0.9"/>
-      <circle cx="176" cy="54" r="22" fill="#59c3c3" opacity="0.22"/>
-      <circle cx="120" cy="110" r="28" fill="#7f8cff" opacity="0.20"/>
-      <circle cx="76" cy="150" r="20" fill="#f6b26b" opacity="0.22"/>
-      <rect x="14" y="20" width="66" height="20" rx="10" fill="#59c3c3" opacity="0.9"/>
-      <text x="47" y="35" text-anchor="middle" class="chip">SCALAR</text>
+  <!-- Scalar card -->
+  <g transform="translate(100 420)">
+    <rect width="420" height="260" rx="28" fill="url(#card)" stroke="#97bee7" stroke-opacity="0.22"/>
+    <text x="28" y="44" class="cardTitle">Scalar field</text>
+    <text x="28" y="72" class="cardCopy">Contours on a synthetic temperature field</text>
+    <g transform="translate(28 94)">
+      <rect width="364" height="132" rx="20" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.10"/>
+      <circle cx="284" cy="36" r="22" fill="#59c3c3" opacity="0.18"/>
+      <circle cx="184" cy="70" r="30" fill="#7f8cff" opacity="0.18"/>
+      <circle cx="98" cy="96" r="24" fill="#f6b26b" opacity="0.16"/>
+      <path d="M18 104 C 62 76, 92 70, 136 74 C 176 78, 206 66, 242 44 C 278 22, 312 18, 346 8" fill="none" stroke="#59c3c3" stroke-width="2.3" opacity="0.95"/>
+      <path d="M18 86 C 62 62, 96 58, 134 60 C 170 62, 202 50, 238 28 C 276 8, 306 4, 346 18" fill="none" stroke="#86d9ff" stroke-width="2.3" opacity="0.95"/>
+      <path d="M18 68 C 60 46, 92 42, 128 44 C 168 46, 204 34, 240 18 C 278 2, 312 0, 346 12" fill="none" stroke="#f6b26b" stroke-width="2.2" opacity="0.9"/>
+      <path d="M18 120 C 62 98, 96 96, 136 100 C 178 104, 214 98, 252 80 C 292 62, 320 50, 346 34" fill="none" stroke="#7f8cff" stroke-width="2.2" opacity="0.9"/>
+      <rect x="18" y="14" width="72" height="20" rx="10" fill="#59c3c3" opacity="0.92"/>
+      <text x="54" y="29" text-anchor="middle" class="chip">SCALAR</text>
+      <rect x="300" y="22" width="44" height="88" rx="8" fill="#0d1522" stroke="#d7ecff" stroke-opacity="0.18"/>
+      <rect x="308" y="28" width="28" height="14" rx="4" fill="#59c3c3"/>
+      <rect x="308" y="46" width="28" height="14" rx="4" fill="#86d9ff"/>
+      <rect x="308" y="64" width="28" height="14" rx="4" fill="#7f8cff"/>
+      <rect x="308" y="82" width="28" height="14" rx="4" fill="#f6b26b"/>
     </g>
+    <text x="28" y="246" class="cardCopy">Slice first, then contour and color by a named scalar array.</text>
   </g>
 
-  <!-- Vector panel -->
-  <g transform="translate(920 120)">
-    <rect width="300" height="340" rx="28" fill="url(#panel)" stroke="#8fb8e8" stroke-opacity="0.28"/>
-    <text x="28" y="46" class="panel-title">Vector field</text>
-    <text x="28" y="76" class="panel-copy">Glyphs and streamlines around a rotating flow</text>
-    <g transform="translate(36 98)">
-      <rect width="228" height="200" rx="18" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.12"/>
-      <g stroke="#d7ecff" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.92">
-        <line x1="38" y1="156" x2="66" y2="128"/>
-        <line x1="70" y1="132" x2="96" y2="104"/>
-        <line x1="102" y1="102" x2="128" y2="74"/>
-        <line x1="134" y1="74" x2="160" y2="46"/>
-        <line x1="166" y1="48" x2="190" y2="24"/>
-        <line x1="62" y1="170" x2="88" y2="144"/>
-        <line x1="96" y1="146" x2="120" y2="120"/>
-        <line x1="128" y1="120" x2="154" y2="94"/>
-        <line x1="158" y1="92" x2="184" y2="66"/>
+  <!-- Vector card -->
+  <g transform="translate(590 420)">
+    <rect width="420" height="260" rx="28" fill="url(#card)" stroke="#97bee7" stroke-opacity="0.22"/>
+    <text x="28" y="44" class="cardTitle">Vector field</text>
+    <text x="28" y="72" class="cardCopy">Glyphs and streamlines for a rotational flow</text>
+    <g transform="translate(28 94)">
+      <rect width="364" height="132" rx="20" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.10"/>
+      <circle cx="188" cy="66" r="54" fill="none" stroke="#59c3c3" stroke-width="2.4" stroke-dasharray="8 10" opacity="0.8"/>
+      <circle cx="188" cy="66" r="28" fill="none" stroke="#f6b26b" stroke-width="2.2" stroke-dasharray="4 8" opacity="0.65"/>
+      <g stroke="#dfeaf7" stroke-width="2.6" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.95">
+        <line x1="76" y1="108" x2="110" y2="76"/>
+        <line x1="108" y1="90" x2="142" y2="58"/>
+        <line x1="140" y1="72" x2="172" y2="40"/>
+        <line x1="176" y1="62" x2="208" y2="28"/>
+        <line x1="210" y1="50" x2="242" y2="18"/>
+        <line x1="244" y1="38" x2="278" y2="6"/>
+        <line x1="92" y1="120" x2="126" y2="88"/>
+        <line x1="126" y1="104" x2="158" y2="72"/>
+        <line x1="160" y1="88" x2="192" y2="56"/>
+        <line x1="194" y1="72" x2="228" y2="40"/>
+        <line x1="228" y1="56" x2="262" y2="24"/>
+        <line x1="262" y1="42" x2="296" y2="10"/>
       </g>
-      <circle cx="118" cy="106" r="60" fill="none" stroke="#59c3c3" stroke-width="2" stroke-dasharray="8 10" opacity="0.75"/>
-      <circle cx="118" cy="106" r="32" fill="none" stroke="#f6b26b" stroke-width="2" stroke-dasharray="4 8" opacity="0.55"/>
-      <rect x="14" y="20" width="68" height="20" rx="10" fill="#7f8cff" opacity="0.9"/>
-      <text x="48" y="35" text-anchor="middle" class="chip">VECTOR</text>
+      <rect x="18" y="14" width="74" height="20" rx="10" fill="#7f8cff" opacity="0.92"/>
+      <text x="55" y="29" text-anchor="middle" class="chip">VECTOR</text>
     </g>
+    <text x="28" y="246" class="cardCopy">Glyph scale should be readable, and streamlines should be documented.</text>
   </g>
 
-  <!-- Review panel -->
-  <g transform="translate(1260 120)">
-    <rect width="250" height="340" rx="28" fill="url(#panel)" stroke="#8fb8e8" stroke-opacity="0.28"/>
-    <text x="26" y="46" class="panel-title">Review</text>
-    <text x="26" y="76" class="panel-copy">AI-output quality and workflow checks</text>
-    <g transform="translate(28 108)">
-      <rect width="194" height="196" rx="18" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.12"/>
-      <g fill="none" stroke="#59c3c3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M32 60 l12 12 22 -24"/>
-        <path d="M32 110 l12 12 22 -24"/>
-        <path d="M32 160 l12 12 22 -24"/>
+  <!-- Review card -->
+  <g transform="translate(1080 420)">
+    <rect width="420" height="260" rx="28" fill="url(#card)" stroke="#97bee7" stroke-opacity="0.22"/>
+    <text x="28" y="44" class="cardTitle">Review</text>
+    <text x="28" y="72" class="cardCopy">AI-output quality and reproducibility checks</text>
+    <g transform="translate(28 94)">
+      <rect width="364" height="132" rx="20" fill="#07111c" stroke="#9bd3ff" stroke-opacity="0.10"/>
+      <rect x="18" y="16" width="80" height="20" rx="10" fill="#f6b26b" opacity="0.92"/>
+      <text x="58" y="31" text-anchor="middle" class="chip">CHECK</text>
+      <g fill="none" stroke="#59c3c3" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M34 62 l10 10 20 -22"/>
+        <path d="M34 92 l10 10 20 -22"/>
+        <path d="M34 122 l10 10 20 -22"/>
       </g>
-      <g class="panel-copy" fill="#d1def0">
-        <text x="78" y="66">Dataset format</text>
-        <text x="78" y="116">Array selection</text>
-        <text x="78" y="166">Limitations</text>
+      <g class="checkText">
+        <text x="78" y="68">Dataset format named</text>
+        <text x="78" y="98">Array selection explicit</text>
+        <text x="78" y="128">Limitations stated</text>
       </g>
-      <rect x="16" y="18" width="76" height="20" rx="10" fill="#f6b26b" opacity="0.9"/>
-      <text x="54" y="33" text-anchor="middle" class="chip">CHECK</text>
     </g>
+    <text x="28" y="246" class="cardCopy">A good answer explains the pipeline before it tries to sound impressive.</text>
   </g>
 
-  <path d="M 580 490 C 790 534, 972 532, 1190 490" fill="none" stroke="url(#accent)" stroke-width="3.5" opacity="0.9"/>
-  <path d="M 106 568 C 356 520, 586 530, 770 576" fill="none" stroke="#59c3c3" stroke-width="3" opacity="0.12"/>
-  <path d="M 104 590 C 360 552, 588 556, 786 606" fill="none" stroke="#7f8cff" stroke-width="2.8" opacity="0.10"/>
+  <path d="M 104 730 C 410 690, 760 688, 1080 708 C 1260 720, 1380 718, 1496 694" fill="none" stroke="url(#softLine)" stroke-width="4" opacity="0.85"/>
 </svg>

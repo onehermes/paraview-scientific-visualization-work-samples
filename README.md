@@ -94,9 +94,8 @@ That same discipline is useful when evaluating AI-generated technical content or
 - record what the visualization supports and what it does not
 - avoid overstated conclusions that the dataset cannot justify
 
-## Portfolio Placeholders
+## Repository Link
 
-- Portfolio: https://dev.parley.live
 - GitHub: https://github.com/YOUR_USERNAME
 
 ## Repository Layout
