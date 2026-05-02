@@ -94,7 +94,7 @@ That same discipline is useful when evaluating AI-generated technical content or
 
 ## Repository Link
 
-- GitHub: https://github.com/YOUR_USERNAME
+- GitHub: https://github.com/onehermes
 
 ## Repository Layout
 
